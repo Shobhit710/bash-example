@@ -1,4 +1,4 @@
 steps:
   - label: ":hammer: Example Script"
     command: |
-      "script1.sh"
+      "sh script1.sh"
