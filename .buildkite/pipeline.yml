@@ -3,9 +3,11 @@ steps:
     command: "script1.sh"
 
   - input: "Information please"
+    key: "info"
     fields:
       - text: "Type anything"
         key: "anything"
 
   - label: "Output"
+    depends_on: "info"
     command: echo $(buildkite-agent meta-data get anything)
