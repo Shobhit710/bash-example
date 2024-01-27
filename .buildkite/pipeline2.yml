@@ -10,4 +10,5 @@ steps:
   - label: "After"
     depends_on: "info"
     command: |
+      git pull origin main
       cat Readme.md
