@@ -7,6 +7,7 @@ steps:
     fields:
       - text: "Type anything"
         key: "anything"
+        forma: "^0\.0\.\d+$"
 
   - label: "Output"
     depends_on: "info"
