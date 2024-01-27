@@ -1,3 +1,11 @@
 steps:
   - label: ":hammer: Example Script"
     command: "script1.sh"
+
+  - input: "Information please"
+    fields:
+      - text: "Type anything"
+        key: "anything"
+
+  - label: "Output"
+    command: echo $(buildkite-agent meta-data get anything)
