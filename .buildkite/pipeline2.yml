@@ -2,6 +2,10 @@ steps:
   - label: "Before"
     command: |
       cat Readme.md
+  - command: ls
+    plugins:
+      - docker#v3.3.0:
+          image: node
   - input: "Information please"
     key: "info"
     fields:
