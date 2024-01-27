@@ -1,6 +1,8 @@
 steps:
   - label: ":hammer: Example Script"
-    command: "script1.sh"
+    command: |
+      yum install -y git pip
+      pip install --upgrade pip
 
   - input: "Information please"
     key: "info"
