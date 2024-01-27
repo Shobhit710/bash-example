@@ -2,11 +2,12 @@ steps:
   - label: "Before"
     command: |
       cat Readme.md
-  - command: ls
+  - command: "npm start"
     plugins:
-      - docker#v3.3.0:
-          image: node
-          workdir: /app
+      - docker#v5.9.0:
+          image: "node:7"
+          always-pull: true
+          mount-checkout: false
   - input: "Information please"
     key: "info"
     fields:
