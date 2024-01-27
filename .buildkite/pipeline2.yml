@@ -2,7 +2,7 @@ steps:
   - label: "Before"
     command: |
       cat Readme.md
-  - command: "npm start"
+  - command: "ls"
     plugins:
       - docker#v5.9.0:
           image: "node:7"
