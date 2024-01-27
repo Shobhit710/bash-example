@@ -6,6 +6,7 @@ steps:
     plugins:
       - docker#v3.3.0:
           image: node
+          workdir: /app
   - input: "Information please"
     key: "info"
     fields:
