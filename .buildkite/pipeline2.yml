@@ -2,12 +2,10 @@ steps:
   - label: "Before"
     command: |
       cat Readme.md
-  - command: "ls"
-    plugins:
-      - docker#v5.9.0:
-          image: "node:7"
-          always-pull: true
-          mount-checkout: false
+  - label: "PR Label Run"
+    if: build.pull_request.labels='label_added'
+    command: echo "Hey PR is labelled"
+    
   - input: "Information please"
     key: "info"
     fields:
