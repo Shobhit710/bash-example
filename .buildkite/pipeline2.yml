@@ -2,10 +2,12 @@ steps:
   - label: "Before"
     command: |
       cat Readme.md
-  - label: "Install python"
-    command: apt-get update && apt-get install -y python3
-  - label: "Run Test file"
-    command: python3 test.py
+  - command: |
+      apt-get update && apt-get install -y python3
+      python3 test.py
+    plugins:
+      - docker#v5.10.0:
+          image: "node:7"
   # - label: "PR Label Run"
   #   if: build.pull_request.labels='label_added'
   #   command: echo "Hey PR is labelled"
