@@ -7,7 +7,7 @@ steps:
       python3 test.py
     plugins:
       - docker#v5.10.0:
-          image: "node:7"
+          image: "docker:latest"
   # - label: "PR Label Run"
   #   if: build.pull_request.labels='label_added'
   #   command: echo "Hey PR is labelled"
