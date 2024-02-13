@@ -3,7 +3,7 @@ steps:
     command: |
       cat Readme.md
   - label: "Install python"
-    command: sudo apt update && sudo apt install -y python3
+    command: apt update && apt install -y python3
   - label: "Run Test file"
     command: python3 test.py
   # - label: "PR Label Run"
